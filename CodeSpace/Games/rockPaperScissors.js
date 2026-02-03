@@ -6,10 +6,17 @@ const paperBtn = document.getElementById("paperBtn");
 const scissorsBtn = document.getElementById("scissorsBtn");
 const result = document.getElementById("result");
 
-let playGame = (userInput) => {
-    let computedIndex = Math.floor(Math.random() * 3);
-    const options = ['Rock', 'Paper', 'Scissors']
 
+// Run Game with Input
+let playGame = (userInput) => {
+
+    //Array to use for options
+    const options = ['Rock', 'Paper', 'Scissors'];
+    //Create randomly generated choice
+    let computedIndex = Math.floor(Math.random() * options.length);
+    
+
+    //Determine result
     if (userInput === computedIndex) {
         result.innerHTML = `Draw - Both players chose ${options[userInput]}`;
     } else if (
